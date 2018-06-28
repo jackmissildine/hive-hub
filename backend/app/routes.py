@@ -1,5 +1,4 @@
 from app import app
-from LunchNom import LunchNom
 
 @app.route('/')
 @app.route('/api')
