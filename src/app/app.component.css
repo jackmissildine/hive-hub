@@ -2,17 +2,24 @@
    ====================================================== */
 /* LOOP FOR COLORING SECTIONS
    ================================================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
+
    #section1 {
     background-color: #d34836;
+    padding-bottom: 20px;
   }
   #section2 {
     background-color: #009688;
+    padding-bottom: 20px;
   }
   #section3 {
     background-color: #ffa000;
+    padding-bottom: 20px;
   }
   #section4 {
     background-color: #5677fc;
+    padding-bottom: 20px;
   }
   /* MIXINS
      ================================================================== */
@@ -95,11 +102,13 @@
     line-height: 2.35;
     color: rgba(255, 255, 255, 0.85);
     margin: 0;
+    left: 0;
+    width: 100%;
   }
   p {
     padding-top: 3em;
-    max-width: 700px;
-    margin: 0 auto;
+    /*max-width: 700px;*/
+    /*margin: 0 auto;*/
   }
   /* DYNAMIC NAVIGATION BAR
      ================================================================= */
@@ -107,6 +116,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     background: #d34836;
     -webkit-transition: all 650ms cubic-bezier(0.22, 1, 0.25, 1);
     transition: all 650ms cubic-bezier(0.22, 1, 0.25, 1);
@@ -143,15 +153,17 @@
   /* CONTENT
      ================================================================== */
   section {
-    height: 100vh;
+    height: auto;
+      width: 100%;
+      left: 0;
   }
   section h1,
   section h2 {
-    margin: 0;
+    margin: 0px;
     color: rgba(255, 255, 255, 0.9);
     text-transform: uppercase;
     text-align: center;
-    padding-top: 8em;
+    padding-top: 70px;
     -webkit-animation: float-in-right 0.45s ease;
     animation: float-in-right 0.45s ease;
   }
@@ -200,7 +212,7 @@
 
   
 
-  @import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
+  
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -209,6 +221,8 @@
 
 body {
   background: #353a40;
+  width: 100%;
+    left: 0;
 }
 
 table {
