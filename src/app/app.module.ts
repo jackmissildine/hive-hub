@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LunchComponent } from './lunch/lunch.component';
+import { HelpPageComponent } from './help-page/help-page.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -12,7 +13,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   declarations: [
     AppComponent,
     LunchComponent,
-    DashboardComponent
+    DashboardComponent,
+    HelpPageComponent
   ],
   imports: [
     BrowserModule,
