@@ -2,6 +2,8 @@
    ====================================================== */
 /* LOOP FOR COLORING SECTIONS
    ================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
+
    #section1 {
     background-color: #d34836;
   }
@@ -204,7 +206,7 @@
 
   
 
-  @import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
+  
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
