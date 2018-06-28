@@ -198,6 +198,10 @@
     opacity: 1;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   
 
   @import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
