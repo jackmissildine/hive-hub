@@ -1,7 +1,7 @@
-from flask import Flask
+import json
+from flask import Flask, requests
 
 app = Flask(__name__)
-
 
 @app.route('/api')
 def hello():
