@@ -181,17 +181,17 @@
     line-height: 40px;
     padding: 0 20px 0 0;
   }
-  .list ul li a {
+/*  .list ul li a {
     text-decoration: none;
     color: #666;
-  }
+  }*/
   .list ul li:nth-child(2n) {
     color:white;
-    background: #5677fc;
+    background: black;
   }
   .list ul li a:nth-child(2n) {
     color:white;
-    background: #5677fc;
+    text-decoration: none;
   }
   .list ul li:hover a {
     width: 40px;
