@@ -5,4 +5,5 @@ class LunchNom(object):
         self.image_url = image_url
         self.is_seconded = is_seconded
 
-    def
+    def second(self):
+        self.is_seconded = True
