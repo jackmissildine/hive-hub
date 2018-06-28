@@ -2,6 +2,8 @@
    ====================================================== */
 /* LOOP FOR COLORING SECTIONS
    ================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
+
    #section1 {
     background-color: #d34836;
   }
@@ -143,7 +145,7 @@
   /* CONTENT
      ================================================================== */
   section {
-    height: 100vh;
+    height: auto;
   }
   section h1,
   section h2 {
@@ -151,7 +153,7 @@
     color: rgba(255, 255, 255, 0.9);
     text-transform: uppercase;
     text-align: center;
-    padding-top: 8em;
+    padding-top: 4em;
     -webkit-animation: float-in-right 0.45s ease;
     animation: float-in-right 0.45s ease;
   }
@@ -204,7 +206,7 @@
 
   
 
-  @import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
+  
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
