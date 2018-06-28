@@ -18,19 +18,30 @@ class Nomination(db.Model):
         self.seconded = seconded
         self.votes = votes
 
+    @property
+    def serialize(self):
+        return {
+            'name': self.name,
+            'pic_path': self.pic_path,
+            'seconded': self.seconded,
+            'votes': self.votes
+        }
+
 db.create_all()
 
 @app.route('/api/nominations/', methods = ['GET', 'POST'])
 def nominations():
     if request.method == 'GET':
-        return jsonify(Nomination.query.all())
+        return jsonify([nom.serialize for nom in Nomination.query.all()]), 200
     else:
         data = request.get_json()
-        name = data.get.name
-        pic_path = data.pic_path
-        seconded = data.seconded
-        votes = data.votes
+        name = data['name']
+        pic_path = data['pic_path']
+        seconded = data['seconded']
+        votes = data['votes']
         nomination = Nomination(name, pic_path, seconded, votes)
         db.session.add(nomination)
         db.session.commit()
-        return 201
+        return 'OK', 200
+
+

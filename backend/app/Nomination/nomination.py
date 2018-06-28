@@ -12,3 +12,12 @@ class Nomination(db.Model):
         self.pic_path = pic_path
         self.seconded = seconded
         self.votes = votes
+
+    @property
+    def serialize(self):
+        return {
+            'name': self.name,
+            'pic_path': self.pic_path,
+            'seconded': self.seconded,
+            'votes': self.votes
+        }
