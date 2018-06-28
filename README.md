@@ -1,5 +1,7 @@
 To use app: 
 
-1. npm install -g @angular/cli
+1. Install node.js and npm https://nodejs.org/en/download/
 
-2. ng serve --open
+2. npm install -g @angular/cli
+
+3. ng serve --open
