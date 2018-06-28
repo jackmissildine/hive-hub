@@ -26,10 +26,10 @@ def nominations():
         return jsonify(Nomination.query.all())
     else:
         data = request.get_json()
-        name = data.get.name
-        pic_path = data.pic_path
-        seconded = data.seconded
-        votes = data.votes
+        name = data['name']
+        pic_path = data['pic_path']
+        seconded = data['seconded']
+        votes = data['votes']
         nomination = Nomination(name, pic_path, seconded, votes)
         db.session.add(nomination)
         db.session.commit()
