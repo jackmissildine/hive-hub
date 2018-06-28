@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LunchComponent } from './lunch/lunch.component';
+import { HelpPageComponent } from './help-page/help-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LunchComponent
+    LunchComponent,
+    HelpPageComponent
   ],
   imports: [
     BrowserModule
