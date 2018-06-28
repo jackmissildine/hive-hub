@@ -146,6 +146,7 @@
      ================================================================== */
   section {
     height: auto;
+    padding-bottom: 1px;
   }
   section h1,
   section h2 {
