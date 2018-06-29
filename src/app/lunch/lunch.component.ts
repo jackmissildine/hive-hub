@@ -16,16 +16,16 @@ export class LunchComponent implements OnInit {
   public noms: Observable<{name: string, pic_path: string, seconded: boolean, votes: number}[]>;
 
   ngOnInit() {
-  	this.noms = this.getNoms();
+  	//this.noms = this.getNoms();
   }
 
-  public getNoms():Observable<{name: string, pic_path: string, seconded: boolean, votes: number}[]> {
+ /* public getNoms():Observable<{name: string, pic_path: string, seconded: boolean, votes: number}[]> {
   	
   	let URL ='/api/nominations/';
   	return this.http.get<{name: string, pic_path: string, seconded: boolean, votes: number}[]>(URL)
   	    .subscribe(response => noms = response.data);
   }
-
+  */
 
   
 
