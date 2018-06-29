@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Nom } from '../nom';
+import { NomService } from '../nom.service';
 
 @Component({
   selector: 'app-lunch',
@@ -8,28 +10,25 @@ import { Observable } from 'rxjs';
   styleUrls: ['./lunch.component.css']
 })
 export class LunchComponent implements OnInit {
-
+  noms: Nom[];
+  seconded;
   
-  
-  constructor(private http: HttpClient) {}
+  constructor(private nomService: NomService) {}
 
-  public noms: Observable<{name: string, pic_path: string, seconded: boolean, votes: number}[]>;
 
   ngOnInit() {
-  	//this.noms = this.getNoms();
+  	this.getNoms();
   }
 
- /* public getNoms():Observable<{name: string, pic_path: string, seconded: boolean, votes: number}[]> {
-  	
-  	let URL ='/api/nominations/';
-  	return this.http.get<{name: string, pic_path: string, seconded: boolean, votes: number}[]>(URL)
-  	    .subscribe(response => noms = response.data);
-  }
-  */
+  public getNoms(): void {
+	  this.nomService.getNoms()
+	  .subscribe(noms => this.noms = noms);
+  }  	
+  
 
   
 
-  public postNoms(nomName: string, nomPic_path: string, nomSeconded: boolean, nomVotes: number):void {
+  /*public postNoms(nomName: string, nomPic_path: string, nomSeconded: boolean, nomVotes: number):void {
   	let nom = {
   		name: nomName,
   		pic_path: nomPic_path,
@@ -39,6 +38,17 @@ export class LunchComponent implements OnInit {
 
   	let URL = '/api/nominations/';
   	this.http.post(URL, nom);
+  }*/
+
+  public add(name: string):void {
+	name = name.trim();
+	if (!name) {return; }
+	this.noms.push({name} as Nom);
+
+  }
+
+  public second():void {
+	this.seconded = true;
   }
 
 }

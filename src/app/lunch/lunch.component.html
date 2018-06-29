@@ -52,23 +52,38 @@
 </div>
 
 <section  id="section1" >
-	<h1>Friday Lunch Nominations</h1>
+	<h1 class="lunch-heading">Friday Lunch Nominations</h1>
 					
 	<table>
 		<thead>
 			<tr>
 				<th>Location</th>
-				<th>Seconded?</th>
+				<th>Nominate</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td>McDonalds</td>
-				<td><button type="button">2nd</button></td>
+				<td><input #nomName /></td>
+				<td><button (click)="add(nomName.value); nomName.value=''">nom</button></td>
 			</tr>
 				
 		</tbody>
 	</table>
-	<input type="submit" value="Submit" onclick="postNoms(nomination, pic_path, false, 0)">
+
+	<table>
+		<thead>
+			<tr>
+				<th>Current Noms</th>
+			</tr>
+		</thead>
+		<tbody>
+			<ul class="noms">
+				<li *ngFor="let nom of noms">
+					<td><span>{{nom.name}}</span></td>
+					<td><button>2nd?</button></td>
+				</li>
+			</ul>
+		</tbody>
+	</table>
 </section>
 
