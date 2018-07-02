@@ -234,7 +234,7 @@ thead {
 
 thead th {
   font-family: 'Patua One', cursive;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: #fff;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
@@ -263,7 +263,7 @@ tbody tr td {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #5f6062;
-  font-size: 13px;
+  font-size: 16px;
   padding: 20px 20px 20px 20px;
   border-bottom: 1px solid #e0e0e0;
 }
