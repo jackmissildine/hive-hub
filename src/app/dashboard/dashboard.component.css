@@ -107,6 +107,12 @@
   }
   /* DYNAMIC NAVIGATION BAR
      ================================================================= */
+  app-dashboard {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 0;
+  }
   nav {
     position: fixed;
     width: 100%;
@@ -127,16 +133,19 @@
     z-index: 1;
   }
   nav ul {
-    position: relative;
+    position: fixed;
     margin: 0;
-    z-index: 2;
+    z-index: 200;
+    width: 100%;
+    left: -40px;
     text-transform: uppercase;
     text-align: center;
   }
   nav ul li {
     display: inline-block;
     padding: 1.35em 0;
-    margin-right: 3em;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
     font-size: 0.9em;
   }
   nav ul li a {
