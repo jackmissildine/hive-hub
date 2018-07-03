@@ -107,6 +107,12 @@
   }
   /* DYNAMIC NAVIGATION BAR
      ================================================================= */
+  app-dashboard {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 0;
+  }
   nav {
     position: fixed;
     width: 100%;
@@ -127,16 +133,19 @@
     z-index: 1;
   }
   nav ul {
-    position: relative;
+    position: fixed;
     margin: 0;
-    z-index: 2;
+    z-index: 200;
+    width: 100%;
+    left: -40px;
     text-transform: uppercase;
     text-align: center;
   }
   nav ul li {
     display: inline-block;
     padding: 1.35em 0;
-    margin-right: 3em;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
     font-size: 0.9em;
   }
   nav ul li a {
@@ -164,7 +173,7 @@
     -webkit-animation: float-in-left 0.45s ease;
     animation: float-in-left 0.45s ease;
   }
-  
+
 .list {
     display:block;
     width: 50%;
@@ -207,15 +216,11 @@
     text-decoration: none;
   }
 
- 
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-body {
-  background: #353a40;
 }
 
 table {
@@ -238,7 +243,7 @@ thead {
 
 thead th {
   font-family: 'Patua One', cursive;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: #fff;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
@@ -267,7 +272,7 @@ tbody tr td {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #5f6062;
-  font-size: 13px;
+  font-size: 16px;
   padding: 20px 20px 20px 20px;
   border-bottom: 1px solid #e0e0e0;
 }
